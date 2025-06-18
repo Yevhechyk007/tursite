@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manufaktura</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #311d02; 
+      line-height: 1.6;
+    }
+
+    header {
+      background: #311d02;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .container img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .description {
+      margin-top: 20px;
+    }
+
+    .description h2 {
+      color: #fff;
+      background: #311d02;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .description p {
+      color: #000000e6;
+    }
+
+    .video-section {
+      text-align: center;
+      padding: 0px;
+      background: #311d02;
+      color: #fff;
+      border-radius: 20px; 
+      margin-top: 40px; 
+      padding-top: 20px; 
+      
+    }
+
+    .video-section h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      margin: 10px 0;
+    }
+
+    .video-section video {
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background: #311d02;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      justify-content: center;
+    }
+    
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #311d02;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 10%;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-size: 1.5rem;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .back-to-top.show {
+      display: flex;
+    }
+
+    .back-to-top:hover {
+      background: #fff;
+      color: #083102;
+      .opis p {
+    margin: 10px 0;
+  }
+
+  .opis p {
+    margin: 10px 0;
+  }
+
+  .opis ul {
+    list-style: none; 
+    padding: 0;
+  }
+
+  .opis ul li {
+    position: relative;
+    padding-left: 20px; 
+    margin-bottom: 5px;
+    font-weight: 700; 
+  }
+
+  .opis ul li::before {
+    content: "•"; 
+    position: absolute;
+    left: 0;
+    color: #311d02; 
+    font-size: 1.2rem;
+    font-style: italic; 
+    line-height: 1;
+  }
+    }
+    h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+}
+
+.gallery img:hover {
+    transform: scale(1.1); 
+}
+
+    .context-box {
+      background: #f8f4ec;
+      border: 2px solid #311d02;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .context-box h3 {
+      margin-top: 0;
+      color: #311d02;
+    }
+    @media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  header {
+    font-size: 1.2rem;
+  }
+
+  .video-section video {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery img {
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .video-section h2 {
+    font-size: 1.8rem;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Manufaktura</h1>
+  </header>
+
+  <div class="container">
+    <img src="images/manufaktura-scaled-1.jpg" alt="Atrakcja 1">
+
+    <div class="description">
+      <h2>Manufaktura</h2>
+
+      <p>
+        Manufaktura to jedno z najbardziej znanych centrów kulturowo-handlowych w Polsce, znajdujące się w Łodzi. Jest unikalnym przykładem rewitalizacji historycznej architektury, ponieważ kompleks został zbudowany na terenie dawnej fabryki włókienniczej. Manufaktura łączy w sobie historię, nowoczesność i rozrywkę, stając się jedną z najważniejszych atrakcji turystycznych miasta.
+
+      </p>
+      <div class="opis">
+        <p><strong>Co oferuje Manufaktura:</strong></p>
+        <ul>
+          <li><strong>Zakupy:</strong> </li>
+            Ponad 300 sklepów znanych marek, gdzie każdy znajdzie coś dla siebie.
+            
+            <li><strong>Kultura i sztuka:</strong> </li>
+            Na terenie Manufaktury znajduje się muzeum włókiennictwa, galerie sztuki oraz miejsca organizacji wydarzeń kulturalnych.
+            
+            <li><strong>Rozrywka:</strong> </li>
+            Kino, kręgielnia, park rozrywki oraz liczne miejsca na rodzinne spędzanie czasu.
+            
+            <li><strong>Gastronomia:</strong> </li>
+            Restauracje serwujące potrawy z całego świata, kawiarnie oraz bary, które zadowolą nawet najbardziej wymagających smakoszy.
+            
+            <li><strong>Historia:</strong> </li>
+            Spacerując po Manufakturze, można podziwiać zabytkową architekturę ceglaną, która przypomina o przemysłowej przeszłości miasta.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="context-box">
+      <h3>Ważne informacje</h3>
+      <p>Manufaktura jest wyjątkowym miejscem, które łączy historię z nowoczesnością. Jeśli planujesz odwiedzić Łódź, nie przegap tego kompleksu pełnego atrakcji!</p>
+    </div>
+
+    <section id="gallery">
+      <h2>Galeria</h2>
+      <div class="gallery">
+        <img src="images/4.jpg" alt="Zdjęcie 1">
+        <img src="images/мана1.webp" alt="Zdjęcie 2">
+        <img src="images/мана32.jpg" alt="Zdjęcie 3">
+      </div>
+    </section>
+
+    <section class="video-section">
+      <h2>Video</h2>
+      <video controls>
+        <source src="videos/Manufaktura Łódzka (1).mp4">
+        
+      </video>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2024 Region Turystyczny. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <div class="back-to-top" id="back-to-top">↑</div>
+
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
