@@ -1,0 +1,156 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+
+body {
+	margin:0;
+	font-family:Tahoma,Arial,sans-serif;
+	font-size:1rem;
+	font-weight:400;
+	line-height:1.5;
+	color:#ede8d0;
+	text-align:left;
+	background-color:#ede8d0;
+	height:100%;
+}
+
+header {
+	font-size:2rem;
+	padding:30px 100px;
+	background-color:#550000;
+	color:ede8d0;
+	font-weight:600;
+}
+
+h1 {
+	text-align:center;
+	margin-bottom:50px;
+}
+
+.container {
+	position: relative;
+	width:120px;
+	margin:0 auto;
+	overflow:hidden;
+	border:1px solid #ede8d0;
+	border-top:0;
+	border-bottom:0;
+	background-color:#ede8d0;
+	height:100%;
+}
+
+.animacje {
+	position:relative;
+	margin-bottom:80px;
+}
+
+.pokaz {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.opis {
+	margin:5px 30px;
+}
+.klasa-obiektu {
+	margin:5px 30px 15px 30px;
+}
+.ramki {
+	margin:5px 30px ;
+}
+
+
+footer {
+	position:fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	padding:20px;
+	text-align:center;
+	background:#550000;
+	color:#fff;
+	opacity: 0.5;
+}
+
+ol {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+	font-size:18px;
+	height:2em;
+	line-height:2em;
+	text-align:center;
+  }
+  ol > li {
+	float:left;
+	background-color:#550000;
+	width:150px;
+  }
+  ol a {
+	display:block;
+	color:#000;
+	text-decoration:none;
+	padding:0 5px;
+  }
+  ol > li > a:hover {
+	color:#550000;
+  }
+  
+  ol > li:hover {
+	background-color:#550000;
+  }
+  ol > li > ul {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+  }
+  ol > li {
+	float:left;
+	background-color:#FDD700;
+	width:150px;
+	margin-left:1px;
+  }
+  
+  ol > li:first-child {
+	margin-left:0;
+  }
+  ol > li > ul > li > a {
+	border-top:1px solid #FFF;
+  }
+  ol {
+	background-color:#FFF;
+  }
+  
+  ol > li > ul > li {
+	background-color:#eeeeee;
+  }
+  
+  ol > li > ul > li:hover {
+	background-color:#ede8d0;
+  }
+  
+  ol > li > ul > li:hover a {
+	color:#0c155a;
+  }
+  ol > li > ul {
+	display:none;
+  }
+  
+  ol > li:hover > ul {
+	display:block;
+  }
+  ol > li {
+	float:left;
+	background-color:#ede8d0;
+	width:150px;
+	margin-left:1px;
+	height:2em;
+  }
+  
+  ol > li:hover > a {
+	color:#ede8d0;
+  }
+  

@@ -1,0 +1,21 @@
+#blok a, #blok li:hover li a{
+	background-color: #17a2b8;
+	color: #ffffff;
+}
+
+#block li:hover a, #blok li:hover li:hover a{
+	color: #17a2b8;
+	background-color: #ffffff;
+}
+
+#blok ul {
+	position: absolute;
+	top: -1px;
+	left: 200px;
+	visibility: hidden;
+}
+
+#blok li:hover ul{
+	visibility: visible;
+	width: auto;
+}

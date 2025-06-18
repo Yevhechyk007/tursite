@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4CAF50; /* Zielone boisko */
+    margin: 0;
+}
+
+.boisko {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: #6b8e23;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Bramka */
+.bramka {
+    position: absolute;
+    right: 25px;
+    top: 50px;
+    width: 10px;
+    height: 100px;
+    border: 5px solid #fff;
+    background-color: transparent;
+    z-index: 1;
+}
+
+/* Bramkarz */
+.bramkarz {
+    position: absolute;
+    bottom: 10px;
+    width: 30px;
+    left: -25px; ;
+    height: 30px;
+    background-image: url("https://images.prom.ua/5109405177_vorotarski-rukavichki-playgame.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    animation: skokDoPilki 1s ease-in-out 0.5s forwards;
+    z-index: 20;
+
+}
+
+/* Piłkarz */
+.pilkarz {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background-image: url("https://img.a.transfermarkt.technology/portrait/big/8198-1694609670.jpg?lm=1");
+    
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    animation: pilkarzRuch 1s ease-in-out forwards;
+}
+.pilkarz2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background-image: url("https://storage.yandexcloud.net/printio/assets/realistic_views/round_mouse_pad/large/7c3e6f63c92081ae34c9017cc33ff36764545cba.jpg?1547641155");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    animation: pilkarz1Ruch 1s ease-in-out forwards;
+
+}
+    
+
+/* Piłka */
+.pilka {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    width: 20px;
+    height: 20px;
+    background-image: url("https://footykits.ru/wp-content/uploads/2017/11/lc-ball.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    animation: lotPilki 1s ease-in-out 0.5s forwards;
+}
+
+/* Napis "GOL!" */
+.gol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    background-size: auto;
+    background-position: auto;
+    font-size: 3em;
+    color: #FFD700;
+    font-weight: bold;
+    opacity: 0;
+    animation: pokazGol 1.1s ease-out 1.5s alternate;
+}
+
+/* Animacje */
+
+/* Ruch piłkarza w stronę piłki */
+@keyframes pilkarzRuch {
+    0% { right: 100px; }
+    100% { left: 50px; }
+}
+@keyframes pilkarz1Ruch {
+    0% { left: 100px; }
+    
+    100% { right: 10px; }
+}
+
+/* Lot piłki do dziewiątki */
+@keyframes lotPilki {
+    0% { left: 50px; bottom: 30px; }
+
+   
+    100% { left: 460px; bottom: 230px; }
+}
+
+/* Skok bramkarza */
+@keyframes skokDoPilki {
+    0% { right: 10px; bottom: 10px; }
+    100% { right: 40px; bottom: 80px; transform: rotate(-45deg); }
+}
+
+/* Animacja napisu "GOL!" */
+@keyframes pokazGol {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
